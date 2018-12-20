@@ -17,17 +17,17 @@ export class RestaurantComponent implements OnInit {
 
   ngOnInit() {this.form = this.fb.group({
     price: new FormControl(),
-    location: new FormControl()
+    zip: new FormControl()
   })
 }
 
 async onSubmit() {
-  console.log(this.form.value.location)
+  console.log(this.form.value.zip)
   console.log(this.form.value.price)
   
   await this.service.getRest(
     event,
-    this.form.value.location,
+    this.form.value.zip,
     this.form.value.price
     ).subscribe(
       data => {
