@@ -1,13 +1,13 @@
 <div>
   <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-    <p>Price Point
+    <p>$Price$ Point
     <select formControlName="price">
       <option value="1">$</option>
       <option value="2">$$</option>
       <option value="3">$$$</option>
       <option value="4">$$$$</option>
     </select></p>
-    <label>Location:</label>
+    <label>Zip Code:</label>
     <input formControlName="location" type="search" placeholder="zip code"><br />
     <button type="submit">Go!</button>
   </form>
