@@ -11,7 +11,8 @@ import { GetRestarauntsService } from '../../services/get-restaraunts.service';
 export class RestaurantComponent implements OnInit {
   form: FormGroup;
   results: Object;
-  item: Object;
+  item: Object; 
+  // grabbing these objects
 
   constructor(private fb: FormBuilder, private service: GetRestarauntsService) { }
 
@@ -22,9 +23,6 @@ export class RestaurantComponent implements OnInit {
 }
 
 async onSubmit() {
-  console.log(this.form.value.zip)
-  console.log(this.form.value.price)
-  
   await this.service.getRest(
     event,
     this.form.value.zip,
@@ -33,7 +31,8 @@ async onSubmit() {
       data => {
         console.log(data)
         this.results = data.businesses[Math.floor(Math.random() * 10)]
-        console.log(this.results)
+        //tom trick learned in intro to coding https://repl.it/@TheRealMVC/AustereLimitedSyntax
+       
         
       }
     )
