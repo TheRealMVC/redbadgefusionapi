@@ -11,13 +11,14 @@
     <input formControlName="location" type="search" placeholder="zip code"><br />
     <button type="submit">Go!</button>
   </form>
-  <div *ngIf="results">
+  <div *ngIf="results"> 
+    <!-- grabbing the results, which i set in my component a container really -->
     <ul>
 
       <li><h3><a href="{{results.url}}" target="_blank">{{ results.name }}</a></h3></li>
       <li><img alt="{{results.name}}" style="width:400px; height:auto" src={{results.image_url}} /></li>
       <li>
-        
+        <!-- this is the rating which is coming before the address...and is way to big -->
         <img *ngIf='results.rating === 1' src='../../../assets/1 star.png' />
         <img *ngIf='results.rating === 1.5' src='../../../assets/1.5 star.png' />
         <img *ngIf='results.rating === 2' src='../../../assets/2_stars.svg.png' />
