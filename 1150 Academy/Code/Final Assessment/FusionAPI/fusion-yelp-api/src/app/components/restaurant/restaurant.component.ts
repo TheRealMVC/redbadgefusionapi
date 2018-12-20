@@ -29,7 +29,6 @@ async onSubmit() {
     this.form.value.price
     ).subscribe(
       data => {
-        console.log(data)
         this.results = data.businesses[Math.floor(Math.random() * 10)]
         //tom trick learned in intro to coding https://repl.it/@TheRealMVC/AustereLimitedSyntax
        
