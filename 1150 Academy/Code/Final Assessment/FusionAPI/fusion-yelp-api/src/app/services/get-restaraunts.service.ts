@@ -13,7 +13,6 @@ export class GetRestarauntsService {
 
   getRest (e, location, price):Observable<any> {
     e.preventDefault()
-    console.log(location, price);
     return this.http.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${location}&price=${price}&open_now=true`, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
